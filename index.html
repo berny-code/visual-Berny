@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual-Berny Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: #00ffcc;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            padding: 20px;
+        }
+        .glitch {
+            font-size: 24px;
+            position: relative;
+            display: inline-block;
+            animation: glitch 0.5s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+            100% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; }
+        }
+        .container {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pixel-frame {
+            border: 8px solid #00ffcc;
+            padding: 10px;
+            display: inline-block;
+            margin: 20px;
+        }
+        img, video {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glitch">Mi Portafolio</h1>
+    <div class="container" id="portfolio"></div>
+    
+    <script>
+        async function cargarTrabajos() {
+            try {
+                let response = await fetch('trabajos.json'); // JSON con las URLs de las imágenes y videos
+                let trabajos = await response.json();
+                let container = document.getElementById('portfolio');
+                
+                trabajos.forEach(trabajo => {
+                    let frame = document.createElement('div');
+                    frame.className = 'pixel-frame';
+                    
+                    if (trabajo.tipo === 'imagen') {
+                        let img = document.createElement('img');
+                        img.src = trabajo.url;
+                        img.alt = 'Imagen del portafolio';
+                        frame.appendChild(img);
+                    } else if (trabajo.tipo === 'video') {
+                        let video = document.createElement('video');
+                        video.src = trabajo.url;
+                        video.controls = true;
+                        frame.appendChild(video);
+                    }
+                    
+                    container.appendChild(frame);
+                });
+            } catch (error) {
+                console.error('Error cargando trabajos:', error);
+            }
+        }
+        
+        cargarTrabajos();
+    </script>
+</body>
+</html>
