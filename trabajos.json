@@ -1,0 +1,10 @@
+[
+    {
+        "tipo": "imagen",
+        "url": "https://tu-repo.github.io/carpeta/imagen1.jpg"
+    },
+    {
+        "tipo": "video",
+        "url": "https://tu-repo.github.io/carpeta/video1.mp4"
+    }
+]
