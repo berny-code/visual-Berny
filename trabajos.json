@@ -7,4 +7,14 @@
         "tipo": "video",
         "url": "https://tu-repo.github.io/carpeta/video1.mp4"
     }
+] 
+[
+  {
+    "titulo": "Feria 25",
+    "descripcion": "Foto tomada en la feria leon.",
+    "tipo": "fotografía",
+    "enlace": "",
+    "fecha": "2025-02-18"
+  }
 ]
+
