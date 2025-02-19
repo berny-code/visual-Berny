@@ -1,30 +1,30 @@
 [
-    {
-        "tipo": "imagen",
-        "url": "https://tu-repo.github.io/carpeta/imagen1.jpg"
-    },
-    {
-        "tipo": "video",
-        "url": "https://tu-repo.github.io/carpeta/video1.mp4"
-    }
-] 
-[
+  {
+    "tipo": "imagen",
+    "titulo": "Imagen de prueba",
+    "descripcion": "Ejemplo de imagen",
+    "url": "https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/carpeta/imagen1.jpg",
+    "fecha": "2025-01-01"
+  },
+  {
+    "tipo": "video",
+    "titulo": "Video de prueba",
+    "descripcion": "Ejemplo de video",
+    "url": "https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/carpeta/video1.mp4",
+    "fecha": "2025-01-02"
+  },
   {
     "titulo": "Feria 25",
-    "descripcion": "Foto tomada en la feria leon.",
+    "descripcion": "Foto tomada en la feria León.",
     "tipo": "fotografía",
-    "enlace": "https://github.com/berny-code/visual-Berny/blob/main/media/feria%2025/_MG_9935.jpg?raw=true",
+    "enlace": "https://raw.githubusercontent.com/berny-code/visual-Berny/main/media/feria%2025/_MG_9935.jpg",
     "fecha": "2025-01-18"
-  }
-]
-[
+  },
   {
-    "titulo": "comercial - Video",
-    "descripcion": "comercial siglo azul",
-    "tipo": "video comercial",
-    "enlace": "media 2/comerciales - Acceso directo.lnk",
+    "titulo": "Comercial - Video",
+    "descripcion": "Comercial Siglo Azul",
+    "tipo": "video",
+    "enlace": "https://raw.githubusercontent.com/berny-code/visual-Berny/main/media%202/comerciales/video.mp4",
     "fecha": "2024-12-22"
   }
 ]
-
-
