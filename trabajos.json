@@ -1,9 +1,9 @@
 [
   {
-    "tipo": "imagen",
-    "titulo": "Imagen de prueba",
+    "tipo": "fotogafia feria leon",
+    "titulo": "luces en movimiento",
     "descripcion": "Ejemplo de imagen",
-    "url": "https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/carpeta/imagen1.jpg",
+    "url": "https://raw.githubusercontent.com/berny-code/visual-Berny/12e164d0e9ef81484fab8ebd588355dd707e0fb6/media/feria%2025/_MG_9935.jpg",
     "fecha": "2025-01-01"
   },
   {
