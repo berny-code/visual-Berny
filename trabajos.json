@@ -7,17 +7,17 @@
     "fecha": "2025-01-01"
   },
   {
-    "tipo": "video",
-    "titulo": "Video de prueba",
-    "descripcion": "Ejemplo de video",
+    "tipo": "foto deportiva",
+    "titulo": "Deportivo victoria vs Shaolin FC",
+    "descripcion": "el verdadero futbol",
     "url": "https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/carpeta/video1.mp4",
     "fecha": "2025-01-02"
   },
   {
-    "titulo": "Feria 25",
-    "descripcion": "Foto tomada en la feria León.",
+    "titulo": "Foto modelaje",
+    "descripcion": "undergraund",
     "tipo": "fotografía",
-    "enlace": "https://raw.githubusercontent.com/berny-code/visual-Berny/main/media/feria%2025/_MG_9935.jpg",
+    "url": "https://raw.githubusercontent.com/berny-code/visual-Berny/3613e918799d619e6f6087c130173724334c0b5d/fotografia%20modelaje/_MG_3989-2.jpg",
     "fecha": "2025-01-18"
   },
   {
