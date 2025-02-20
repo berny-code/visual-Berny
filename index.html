@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual-Berny </title>
+    <title>Visual-Berny</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
@@ -42,17 +42,31 @@
     </style>
 </head>
 <body>
-    <h1 class="glitch">Visual-Berny</h1>
+    <h1 class="glitch">Mi Portafolio</h1>
     <div class="container" id="portfolio"></div>
     
     <script>
         async function cargarTrabajos() {
             try {
                 let response = await fetch('trabajos.json'); // JSON con las URLs de las imágenes y videos
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: No se pudo cargar trabajos.json`);
+                }
                 let trabajos = await response.json();
                 let container = document.getElementById('portfolio');
                 
+                if (!Array.isArray(trabajos)) {
+                    throw new Error('El JSON cargado no es un array válido.');
+                }
+                
+                container.innerHTML = ''; // Limpiar antes de agregar nuevos elementos
+                
                 trabajos.forEach(trabajo => {
+                    if (!trabajo.url || !trabajo.tipo) {
+                        console.warn('Elemento inválido en JSON:', trabajo);
+                        return;
+                    }
+                    
                     let frame = document.createElement('div');
                     frame.className = 'pixel-frame';
                     
@@ -60,22 +74,33 @@
                         let img = document.createElement('img');
                         img.src = trabajo.url;
                         img.alt = 'Imagen del portafolio';
+                        img.onerror = () => img.src = 'fallback.png'; // Imagen por defecto si falla
                         frame.appendChild(img);
                     } else if (trabajo.tipo === 'video') {
                         let video = document.createElement('video');
                         video.src = trabajo.url;
                         video.controls = true;
+                        video.onerror = () => console.warn('No se pudo cargar el video:', trabajo.url);
                         frame.appendChild(video);
+                    } else {
+                        console.warn('Tipo desconocido en JSON:', trabajo.tipo);
+                        return;
                     }
                     
                     container.appendChild(frame);
                 });
             } catch (error) {
                 console.error('Error cargando trabajos:', error);
+                let container = document.getElementById('portfolio');
+                container.innerHTML = '<p style="color: red;">Error al cargar el portafolio. Verifica la conexión o la estructura del JSON.</p>';
             }
         }
         
-        cargarTrabajos();
+        document.addEventListener('DOMContentLoaded', cargarTrabajos);
     </script>
 </body>
 </html>
+
+      
+    
+                  
