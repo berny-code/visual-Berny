@@ -7,12 +7,15 @@ fetch('https://raw.githubusercontent.com/berny-code/visual-Berny/main/trabajos.j
   })
   .then(data => {
     const container = document.getElementById('portafolio');
-    if (!container) return; // Previene errores si el contenedor no existe.
+    if (!container) {
+      console.error('Contenedor "portafolio" no encontrado.');
+      return;
+    }
 
     data.forEach(item => {
       if (!item.titulo || !item.descripcion || !item.url || !item.tipo) {
         console.error("Elemento con datos faltantes:", item);
-        return; // Salta elementos mal formateados
+        return;
       }
 
       const elemento = document.createElement('div');
@@ -25,7 +28,12 @@ fetch('https://raw.githubusercontent.com/berny-code/visual-Berny/main/trabajos.j
       `;
 
       if (item.tipo === "imagen") {
-        contenido += `<img src="${item.url}" width="300" alt="${item.titulo}">`;
+        // Agregamos validación para la URL de la imagen
+        if (item.url && item.url.startsWith('http')) {
+          contenido += `<img src="${item.url}" width="300" alt="${item.titulo}">`;
+        } else {
+          console.error("URL de imagen inválida:", item.url);
+        }
       } else if (item.tipo === "video") {
         contenido += `
           <video controls width="300">
