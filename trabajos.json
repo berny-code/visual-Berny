@@ -1,20 +1,20 @@
 [
   {
-    "tipo": "fotografía",
+    "tipo": "imagen",
     "titulo": "Luces en movimiento",
     "descripcion": "Ejemplo de imagen",
     "url": "https://raw.githubusercontent.com/berny-code/visual-Berny/main/media/feria%2025/_MG_9935.jpg",
     "fecha": "2025-01-01"
   },
   {
-    "tipo": "fotografía",
+    "tipo": "imagen",
     "titulo": "Deportivo Victoria vs Shaolin FC",
     "descripcion": "El verdadero fútbol",
     "url": "https://raw.githubusercontent.com/berny-code/visual-Berny/main/media/foto%20deportiva/_MG_4201.jpg",
     "fecha": "2025-01-02"
   },
   {
-    "tipo": "fotografía",
+    "tipo": "imagen",
     "titulo": "Foto Modelaje",
     "descripcion": "Underground",
     "url": "https://raw.githubusercontent.com/berny-code/visual-Berny/main/media/fotografia%20modelaje/_MG_3989-2.jpg",
