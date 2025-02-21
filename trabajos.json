@@ -14,15 +14,21 @@
     "fecha": "2025-02-07"
   },
   {
-    {
+  
     "tipo": "imagen",
     "titulo": "Foto Modelaje",
     "descripcion": "Underground",
     "url": "",
     "fecha": "2025-02-02"
 }
+ {
+ {
+    "tipo": "imagen",
+    "titulo": "Foto Modelaje",
+    "descripcion": "Underground",
+    "url": "https://raw.githubusercontent.com/berny-code/visual-Berny/main/media/fotografia%20modelaje/foto_modelaje.jpg",
+    "fecha": "2025-02-02"
+}
 
-  },
-  {
   
 
